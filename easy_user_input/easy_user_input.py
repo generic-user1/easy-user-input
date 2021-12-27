@@ -227,3 +227,9 @@ def inputPath(
         
     return userPath
 
+#returns a message; mostly for testing
+def getMsg() -> str:
+    return "Easy User Input module - misc functions that help with user input"
+
+if __name__ == "__main__":
+    print(getMsg())

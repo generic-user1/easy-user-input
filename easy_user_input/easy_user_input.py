@@ -13,7 +13,7 @@ from typing import Tuple
 
 
 def inputYesNo(promptText: str = "Choose yes or no", default: bool = None):
-    from eui import inputYesNo
+    from easy_user_input.eui import inputYesNo
     from warnings import warn
     warn("easy_user_input.easy_user_input has been renamed to easy_user_input.eui and this shortcut will be removed in the future.")
     return inputYesNo(promptText, default)
@@ -23,13 +23,13 @@ def inputChoice(
     promptText:str = "Please select an option", 
     default: int = None
     ) -> int:
-    from eui import inputChoice
+    from easy_user_input.eui import inputChoice
     from warnings import warn
     warn("easy_user_input.easy_user_input has been renamed to easy_user_input.eui and this shortcut will be removed in the future.")
     return inputChoice(choices,promptText,default)
 
 def inputStrictString(promptText: str, allowedChars: str = None, default: str or None = None) -> str:
-    from eui import inputStrictString
+    from easy_user_input.eui import inputStrictString
     from warnings import warn
     warn("easy_user_input.easy_user_input has been renamed to easy_user_input.eui and this shortcut will be removed in the future.")
     return inputStrictString(promptText, allowedChars, default)
@@ -40,7 +40,7 @@ def inputPath(
         existsBehavior: str = "reject",
         default: str or None = None
     ) -> str:
-    from eui import inputPath
+    from easy_user_input.eui import inputPath
     from warnings import warn
     warn("easy_user_input.easy_user_input has been renamed to easy_user_input.eui and this shortcut will be removed in the future.")
     return inputPath(promptText,existsBehavior,default)

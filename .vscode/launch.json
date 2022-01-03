@@ -5,12 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "easy_user_input test",
-            "type": "python",
-            "request": "launch",
-            "module": "easy_user_input.easy_user_input"
-        },
-        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

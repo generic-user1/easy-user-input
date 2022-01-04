@@ -167,6 +167,11 @@ def inputPath(
     from os import path
 
     #construct full prompt
+
+    if default != None:
+        promptText += f" (default '{default}')"
+        
+
     if existsBehavior == "reject":
         fullPromptText = f"{promptText} (new file): "
     elif existsBehavior == "warn" or existsBehavior == "accept" or existsBehavior == "require":
@@ -181,6 +186,10 @@ def inputPath(
     userPath = None
     while userPath == None:
         uInput = input(fullPromptText)
+
+        if uInput == "" and default != None:
+            print(f"No response; defaulting to '{default}'")
+            return default
 
         #expand the ~ char into the user's home directory if needed
         if "~" in uInput:

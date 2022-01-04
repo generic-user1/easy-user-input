@@ -21,7 +21,6 @@ ALL_TEST_CHOICE_SETS = (
 #verify that the user prompt is displayed as expected
 #verify that custom prompts are displayed as expected
 def test_prompt():
-    from simulatedIO import simulatedInput, simulatedOutput
     
     choices = TEST_CHOICES_NO_DESCRIPTIONS
 
@@ -67,8 +66,7 @@ def test_prompt_range():
 
 #verify that when a default value is set, it appears in the prompt correctly
 def test_prompt_default_value():
-    from simulatedIO import simulatedInput, simulatedOutput
-
+    
     #test with no descriptions, with all descriptions, and with mixed descriptions
     #all the return values for each of these sets should be the same
     for choices in ALL_TEST_CHOICE_SETS:
@@ -100,7 +98,6 @@ def test_prompt_default_value():
 
 #verify that options are displaying properly
 def test_options_listing():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     #define expected prompt values for each choice set
     assertionValues = (
@@ -124,7 +121,6 @@ def test_options_listing():
 
 #verify that inputChoice returns the correct value
 def test_return_value():
-    from simulatedIO import simulatedInput
 
     #test with no descriptions, with all descriptions, and with mixed descriptions
     #all the return values for each of these sets should be the same
@@ -147,7 +143,6 @@ def test_return_value():
 #verify that inputChoice returns the correct value
 #when a default is used
 def test_default_return_value():
-    from simulatedIO import simulatedInput
 
     #test with no descriptions, with all descriptions, and with mixed descriptions
     #all the return values for each of these sets should be the same
@@ -177,7 +172,6 @@ def test_default_return_value():
 #verify that inputChoice prints the correct value back to the user
 #when an option is selected
 def test_echo():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     #create assertion values for each option
     assertionValues = (
@@ -204,7 +198,6 @@ def test_echo():
 #verify that inputChoice prints the correct value back to the user
 #when no input is entered an a default value is set
 def test_echo_default_value():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     #define assertion values for each default value
     assertionValues = (
@@ -226,7 +219,6 @@ def test_echo_default_value():
 
 #verify the output for cases where the user's input is invalid
 def test_invalid_input():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     #test with and without descriptions
     #all the values for these sets should be the same

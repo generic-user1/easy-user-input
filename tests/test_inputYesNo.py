@@ -1,9 +1,9 @@
 from easy_user_input.eui import inputYesNo
+from simulatedIO import simulatedInput, simulatedOutput
 
 #verify that the default prompt text is as expected,
 #and the prompt structure is normal
 def test_default_prompt():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     with simulatedInput("y"), simulatedOutput() as promptStream:
         inputYesNo()
@@ -13,7 +13,6 @@ def test_default_prompt():
 
 #verify that custom prompts are displayed properly
 def test_custom_prompt():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     with simulatedInput("y"), simulatedOutput() as promptStream:
         inputYesNo("**custom prompt**")
@@ -23,7 +22,6 @@ def test_custom_prompt():
 
 #verify that default values are displayed properly and accepted when no input is given
 def test_default_values():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     with simulatedInput("\n"), simulatedOutput() as promptStream:
         result = inputYesNo("", default=True)
@@ -42,7 +40,6 @@ def test_default_values():
 
 #verify that all accepted forms of 'yes' result in a boolean True
 def test_yes():
-    from simulatedIO import simulatedInput
     
     yesAliases = ("y", "Y", "yes", "YES", "YeS", "yES", "YEs")
     for yesAlias in yesAliases:
@@ -53,7 +50,6 @@ def test_yes():
 
 #verify that all accepted forms of 'no' result in a boolean True
 def test_no():
-    from simulatedIO import simulatedInput
     
     noAliases = ("n", "N", "no", "NO", "No", "nO")
     for noAlias in noAliases:
@@ -64,7 +60,6 @@ def test_no():
 
 #verify the output for cases when the user's input is invalid
 def test_invalid_input():
-    from simulatedIO import simulatedInput, simulatedOutput
 
     #test with no default
     with simulatedInput("something invalid\ny"), simulatedOutput() as promptStream:
